@@ -41,7 +41,7 @@ class ViewController: UIViewController {
 
     @IBAction func redSliderAction() {
         
-        redSliderValue.text = "\(redSlider.value)"
+        redSliderValue.text = String(format: "%.2f", redSlider.value)
         let backgroundColour = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func greenSliderAction() {
-        greenSliderValue.text = "\(greenSlider.value)"
+        greenSliderValue.text = String(format: "%.2f", greenSlider.value)
         
         let backgroundColour = UIColor(
             red: CGFloat(redSlider.value),
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func blueSliderAction() {
-        blueSliderValue.text = "\(blueSlider.value)"
+        blueSliderValue.text = String(format: "%.2f", blueSlider.value)
         
         let backgroundColour = UIColor(
             red: CGFloat(redSlider.value),
@@ -79,3 +79,17 @@ class ViewController: UIViewController {
     }
     
 }
+
+// MARK: Private methods
+//
+//private func uiViewColour() {
+//
+//    let backgroundColour = UIColor(
+//        red: CGFloat(redSlider.value),
+//        green: CGFloat(greenSlider.value),
+//        blue: CGFloat(blueSlider.value),
+//        alpha: 1.0
+//
+//    )
+//}
+

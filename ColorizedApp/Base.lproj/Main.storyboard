@@ -36,7 +36,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIp-jg-2Yd">
-                                                <rect key="frame" x="75" y="0.0" width="41.333333333333343" height="30"/>
+                                                <rect key="frame" x="70" y="0.0" width="41.333333333333343" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                                             </slider>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="tIp-jg-2Yd" firstAttribute="leading" secondItem="fFI-nb-ecw" secondAttribute="leading" constant="75" id="pJh-wp-pvf"/>
+                                            <constraint firstItem="tIp-jg-2Yd" firstAttribute="leading" secondItem="fFI-nb-ecw" secondAttribute="leading" constant="70" id="pJh-wp-pvf"/>
                                             <constraint firstItem="YRg-KP-t0h" firstAttribute="leading" secondItem="fFI-nb-ecw" secondAttribute="leading" constant="140" id="shb-o9-BAo"/>
                                         </constraints>
                                     </stackView>
@@ -64,7 +64,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78v-Al-snH">
-                                                <rect key="frame" x="75" y="0.0" width="41.333333333333343" height="30"/>
+                                                <rect key="frame" x="70" y="0.0" width="41.333333333333343" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -78,7 +78,7 @@
                                             </slider>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="78v-Al-snH" firstAttribute="leading" secondItem="yVC-7j-grM" secondAttribute="leading" constant="75" id="6v6-SJ-s2I"/>
+                                            <constraint firstItem="78v-Al-snH" firstAttribute="leading" secondItem="yVC-7j-grM" secondAttribute="leading" constant="70" id="6v6-SJ-s2I"/>
                                             <constraint firstItem="1SK-3k-f3U" firstAttribute="leading" secondItem="yVC-7j-grM" secondAttribute="leading" constant="140" id="I25-2U-N0K"/>
                                         </constraints>
                                     </stackView>
@@ -92,7 +92,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7M-Qw-kNX">
-                                                <rect key="frame" x="75" y="0.0" width="41.333333333333343" height="30"/>
+                                                <rect key="frame" x="70" y="0.0" width="41.333333333333343" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -106,7 +106,7 @@
                                             </slider>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="g7M-Qw-kNX" firstAttribute="leading" secondItem="TsX-yG-eqF" secondAttribute="leading" constant="75" id="CML-X1-JW9"/>
+                                            <constraint firstItem="g7M-Qw-kNX" firstAttribute="leading" secondItem="TsX-yG-eqF" secondAttribute="leading" constant="70" id="CML-X1-JW9"/>
                                             <constraint firstItem="eDI-ju-QUe" firstAttribute="leading" secondItem="TsX-yG-eqF" secondAttribute="leading" constant="140" id="HOt-nM-hZU"/>
                                         </constraints>
                                     </stackView>
