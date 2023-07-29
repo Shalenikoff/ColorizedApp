@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ColourSettingsViewController.swift
 //  ColorizedApp
 //
 //  Created by Кирилл Шалеников on 16.02.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ColourSettingsViewController: UIViewController {
 
     // MARK: OUTLETS
     @IBOutlet var colourizedView: UIView!
