@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6S5-ie-ljr">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcy-0D-8Ni">
-                                <rect key="frame" x="30" y="94" width="370" height="167"/>
+                                <rect key="frame" x="30" y="138" width="370" height="167"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="167" id="38z-DE-dEL"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="IWJ-M6-59H">
-                                <rect key="frame" x="20" y="311" width="390" height="124"/>
+                                <rect key="frame" x="20" y="355" width="390" height="124"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="fFI-nb-ecw">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="30"/>
@@ -112,6 +113,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpm-J8-AlL">
+                                <rect key="frame" x="177.66666666666666" y="803.66666666666663" width="75" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -121,9 +127,12 @@
                             <constraint firstItem="IWJ-M6-59H" firstAttribute="top" secondItem="hcy-0D-8Ni" secondAttribute="bottom" constant="50" id="JeY-zw-De3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hcy-0D-8Ni" secondAttribute="trailing" constant="30" id="MRM-ew-jBj"/>
                             <constraint firstItem="IWJ-M6-59H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Occ-Ac-o1E"/>
+                            <constraint firstItem="qpm-J8-AlL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QoA-Gn-mMB"/>
                             <constraint firstAttribute="trailing" secondItem="IWJ-M6-59H" secondAttribute="trailing" constant="20" id="ljY-Eq-WGq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qpm-J8-AlL" secondAttribute="bottom" constant="60" id="tlz-jI-bcj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qWw-hC-GNT"/>
                     <connections>
                         <outlet property="blueSlider" destination="eDI-ju-QUe" id="5dx-SL-p1D"/>
                         <outlet property="blueSliderValue" destination="g7M-Qw-kNX" id="a3n-nF-KzG"/>
@@ -136,10 +145,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75.572519083969468" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1997" y="-3"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5XC-h9-hl0">
+            <objects>
+                <viewController id="r2y-tI-T1M" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S4h-eb-STI">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hBR-Uq-fpY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UQK-ZK-VRg">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="7ad-Qi-uKa">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="ln4-kQ-qJg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30V-aN-bfj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="-3"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3Zf-qt-RDF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6S5-ie-ljr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y2Q-0a-nQX">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="r2y-tI-T1M" kind="relationship" relationship="rootViewController" id="B6O-gD-lJ7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNK-X3-Wgl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-186" y="-3"/>
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.pencil" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
