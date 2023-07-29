@@ -21,7 +21,11 @@ class ColourSettingsViewController: UIViewController {
     @IBOutlet var blueSlider: UISlider!
     
     
-    // MARK: VIEW DID LOAD
+    @IBOutlet var redSliderTextField: UITextField!
+    @IBOutlet var greenSliderTextField: UITextField!
+    @IBOutlet var blueSliderTextField: UITextField!
+    
+    // MARK: VIEW LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         

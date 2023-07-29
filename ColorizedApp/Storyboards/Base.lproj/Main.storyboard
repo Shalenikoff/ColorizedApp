@@ -150,17 +150,20 @@
                     <navigationItem key="navigationItem" id="qWw-hC-GNT"/>
                     <connections>
                         <outlet property="blueSlider" destination="eDI-ju-QUe" id="5dx-SL-p1D"/>
+                        <outlet property="blueSliderTextField" destination="Sv0-C6-rQS" id="ZML-Dz-7wN"/>
                         <outlet property="blueSliderValue" destination="g7M-Qw-kNX" id="a3n-nF-KzG"/>
                         <outlet property="colourizedView" destination="hcy-0D-8Ni" id="ZCL-0f-Tlh"/>
                         <outlet property="greenSlider" destination="1SK-3k-f3U" id="0HB-gS-5ka"/>
+                        <outlet property="greenSliderTextField" destination="0Zj-8K-uWK" id="IsM-sH-gZN"/>
                         <outlet property="greenSliderValue" destination="78v-Al-snH" id="o0c-9G-4it"/>
                         <outlet property="redSlider" destination="YRg-KP-t0h" id="T0n-Hb-B9Z"/>
+                        <outlet property="redSliderTextField" destination="SL1-zU-VRT" id="lgX-xO-vTE"/>
                         <outlet property="redSliderValue" destination="tIp-jg-2Yd" id="ZLT-Xv-F7x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1995.6521739130437" y="-3.2608695652173916"/>
+            <point key="canvasLocation" x="1648" y="-3"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="5XC-h9-hl0">
@@ -182,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="30V-aN-bfj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="-3"/>
+            <point key="canvasLocation" x="730" y="-3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Zf-qt-RDF">
