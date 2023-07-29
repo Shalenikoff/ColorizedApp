@@ -20,7 +20,6 @@ class ColourSettingsViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
-    
     @IBOutlet var redSliderTextField: UITextField!
     @IBOutlet var greenSliderTextField: UITextField!
     @IBOutlet var blueSliderTextField: UITextField!

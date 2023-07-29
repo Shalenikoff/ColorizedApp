@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ColourSettingsViewControllerDelegate {
+    func setColour(_ colour: UIColor)
+}
+
 class MainViewController: UIViewController {
     
 }
