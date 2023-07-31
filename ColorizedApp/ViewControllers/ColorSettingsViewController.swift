@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ColourSettingsViewController: UIViewController {
+class ColorSettingsViewController: UIViewController {
 
     // MARK: OUTLETS
     @IBOutlet var colourizedView: UIView!
