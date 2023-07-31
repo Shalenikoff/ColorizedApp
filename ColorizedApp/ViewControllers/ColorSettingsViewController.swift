@@ -10,19 +10,19 @@ import UIKit
 class ColorSettingsViewController: UIViewController {
 
     // MARK: OUTLETS
-    @IBOutlet var colourizedView: UIView!
+    @IBOutlet weak var colourizedView: UIView!
     
-    @IBOutlet var redSliderValue: UILabel!
-    @IBOutlet var greenSliderValue: UILabel!
-    @IBOutlet var blueSliderValue: UILabel!
+    @IBOutlet weak var redSliderValueLabel: UILabel!
+    @IBOutlet weak var greenSliderValueLabel: UILabel!
+    @IBOutlet weak var blueSliderValueLabel: UILabel!
     
-    @IBOutlet var redSlider: UISlider!
-    @IBOutlet var greenSlider: UISlider!
-    @IBOutlet var blueSlider: UISlider!
+    @IBOutlet weak var redSlider: UISlider!
+    @IBOutlet weak var greenSlider: UISlider!
+    @IBOutlet weak var blueSlider: UISlider!
     
-    @IBOutlet var redSliderTextField: UITextField!
-    @IBOutlet var greenSliderTextField: UITextField!
-    @IBOutlet var blueSliderTextField: UITextField!
+    @IBOutlet weak var redSliderTextField: UITextField!
+    @IBOutlet weak var greenSliderTextField: UITextField!
+    @IBOutlet weak var blueSliderTextField: UITextField!
     
     // MARK: PUBLIC PROPERTIES
     var delegate: ColorSettingsViewControllerDelegate!
@@ -33,16 +33,17 @@ class ColorSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        colourizedView.layer.cornerRadius = 20
+        
         redSlider.tintColor = .red
         greenSlider.tintColor = .green
         blueSlider.tintColor = .blue
         
-        colourizedView.layer.cornerRadius = 20
         colourizedView.backgroundColor = viewColor
         
-        setValue(for: redSlider, greenSlider, blueSlider)
-        setValue(for: redSliderValue, greenSliderValue, blueSliderValue)
+        setValue(for: redSliderValueLabel, greenSliderValueLabel, blueSliderValueLabel)
         setValue(for: redSliderTextField, greenSliderTextField, blueSliderTextField)
+        setValue(for: redSlider, greenSlider, blueSlider)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -55,15 +56,16 @@ class ColorSettingsViewController: UIViewController {
     @IBAction func allSliders(_ sender: UISlider) {
         switch sender {
         case redSlider:
-            setValue(for: redSliderValue)
+            setValue(for: redSliderValueLabel)
             setValue(for: redSliderTextField)
         case greenSlider:
-            setValue(for: greenSliderValue)
+            setValue(for: greenSliderValueLabel)
             setValue(for: greenSliderTextField)
         default:
-            setValue(for: blueSliderValue)
+            setValue(for: blueSliderValueLabel)
             setValue(for: blueSliderTextField)
         }
+        setColor()
     }
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
@@ -93,9 +95,9 @@ extension ColorSettingsViewController {
     private func setValue(for labels: UILabel...) {
         labels.forEach { label in
             switch label {
-            case redSliderValue:
+            case redSliderValueLabel:
                 label.text = string(from: redSlider)
-            case greenSliderValue:
+            case greenSliderValueLabel:
                 label.text = string(from: greenSlider)
             default:
                 label.text = string(from: blueSlider)
@@ -106,9 +108,9 @@ extension ColorSettingsViewController {
     private func setValue(for textFields: UITextField...) {
         textFields.forEach { textField in
             switch textField {
-            case redSliderValue:
+            case redSliderTextField:
                 textField.text = string(from: redSlider)
-            case greenSliderValue:
+            case greenSliderTextField:
                 textField.text = string(from: greenSlider)
             default:
                 textField.text = string(from: blueSlider)
@@ -143,10 +145,6 @@ extension ColorSettingsViewController {
 
 // MARK: UITextFieldDelegate
 extension ColorSettingsViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-    }
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text else { return }
         
@@ -154,13 +152,13 @@ extension ColorSettingsViewController: UITextFieldDelegate {
             switch textField {
             case redSliderTextField:
                 redSlider.setValue(currentValue, animated: true)
-                setValue(for: redSliderValue)
+                setValue(for: redSliderValueLabel)
             case greenSliderTextField:
                 greenSlider.setValue(currentValue, animated: true)
-                setValue(for: greenSliderValue)
+                setValue(for: greenSliderValueLabel)
             default:
                 blueSlider.setValue(currentValue, animated: true)
-                setValue(for: blueSliderValue)
+                setValue(for: blueSliderValueLabel)
             }
             
             setColor()

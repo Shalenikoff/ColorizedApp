@@ -52,7 +52,7 @@
                                                     <action selector="allSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="zlb-b7-gas"/>
                                                 </connections>
                                             </slider>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SL1-zU-VRT">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SL1-zU-VRT">
                                                 <rect key="frame" x="345" y="0.0" width="45" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="HP2-jh-hKd"/>
@@ -92,7 +92,7 @@
                                                     <action selector="allSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="FLU-LJ-Vym"/>
                                                 </connections>
                                             </slider>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Zj-8K-uWK">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Zj-8K-uWK">
                                                 <rect key="frame" x="345" y="0.0" width="45" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="OJ6-H7-9PE"/>
@@ -132,7 +132,7 @@
                                                     <action selector="allSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kxt-3u-Lvu"/>
                                                 </connections>
                                             </slider>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sv0-C6-rQS">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sv0-C6-rQS">
                                                 <rect key="frame" x="345" y="0.0" width="45" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="1Ya-cd-SSb"/>
@@ -175,14 +175,14 @@
                     <connections>
                         <outlet property="blueSlider" destination="eDI-ju-QUe" id="5dx-SL-p1D"/>
                         <outlet property="blueSliderTextField" destination="Sv0-C6-rQS" id="ZML-Dz-7wN"/>
-                        <outlet property="blueSliderValue" destination="g7M-Qw-kNX" id="a3n-nF-KzG"/>
+                        <outlet property="blueSliderValueLabel" destination="g7M-Qw-kNX" id="a3n-nF-KzG"/>
                         <outlet property="colourizedView" destination="hcy-0D-8Ni" id="ZCL-0f-Tlh"/>
                         <outlet property="greenSlider" destination="1SK-3k-f3U" id="0HB-gS-5ka"/>
                         <outlet property="greenSliderTextField" destination="0Zj-8K-uWK" id="IsM-sH-gZN"/>
-                        <outlet property="greenSliderValue" destination="78v-Al-snH" id="o0c-9G-4it"/>
+                        <outlet property="greenSliderValueLabel" destination="78v-Al-snH" id="o0c-9G-4it"/>
                         <outlet property="redSlider" destination="YRg-KP-t0h" id="T0n-Hb-B9Z"/>
                         <outlet property="redSliderTextField" destination="SL1-zU-VRT" id="lgX-xO-vTE"/>
-                        <outlet property="redSliderValue" destination="tIp-jg-2Yd" id="ZLT-Xv-F7x"/>
+                        <outlet property="redSliderValueLabel" destination="tIp-jg-2Yd" id="ZLT-Xv-F7x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
