@@ -46,6 +46,7 @@
                                                 <rect key="frame" x="138" y="0.0" width="187" height="35"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemRedColor"/>
                                                 <connections>
+                                                    <action selector="allSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="zlb-b7-gas"/>
                                                     <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="eQj-Sw-TRy"/>
                                                 </connections>
                                             </slider>
@@ -79,6 +80,7 @@
                                                 <rect key="frame" x="138" y="0.0" width="187" height="35"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                                 <connections>
+                                                    <action selector="allSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="FLU-LJ-Vym"/>
                                                     <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="paD-dC-dZx"/>
                                                 </connections>
                                             </slider>
@@ -112,6 +114,7 @@
                                                 <rect key="frame" x="138" y="0.0" width="187" height="35"/>
                                                 <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
                                                 <connections>
+                                                    <action selector="allSliders:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kxt-3u-Lvu"/>
                                                     <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="L0v-gV-3Ek"/>
                                                 </connections>
                                             </slider>
@@ -128,14 +131,17 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpm-J8-AlL">
-                                <rect key="frame" x="175" y="641.66666666666663" width="64.333333333333314" height="34.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpm-J8-AlL">
+                                <rect key="frame" x="142" y="639" width="131" height="37"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Done"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FpT-rs-Ndy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
                             <constraint firstItem="hcy-0D-8Ni" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="5gW-ek-G9l"/>
                             <constraint firstItem="hcy-0D-8Ni" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="5mK-Kt-eV2"/>
@@ -163,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1648" y="-3"/>
+            <point key="canvasLocation" x="1647.826086956522" y="-3.2608695652173916"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="5XC-h9-hl0">
@@ -214,8 +220,8 @@
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

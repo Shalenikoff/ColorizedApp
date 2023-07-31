@@ -61,89 +61,83 @@ class ColorSettingsViewController: UIViewController {
     
     // MARK: ACTIONS
 
-    @IBAction func redSliderAction() {
-        
-        redSliderValue.text = String(format: "%.2f", redSlider.value)
-        let backgroundColour = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: 1.0
-        )
-        
-        colourizedView.backgroundColor = backgroundColour
+    @IBAction func allSliders(_ sender: UISlider) {
+        switch sender {
+        case redSlider:
+            setValue(for: redSliderValue)
+            setValue(for: redSliderTextField)
+        case greenSlider:
+            setValue(for: greenSliderValue)
+            setValue(for: greenSliderTextField)
+        default:
+            setValue(for: blueSliderValue)
+            setValue(for: blueSliderTextField)
+        }
     }
     
-    @IBAction func greenSliderAction() {
-        greenSliderValue.text = String(format: "%.2f", greenSlider.value)
-        
-        let backgroundColour = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: 1.0
-        )
-        
-        colourizedView.backgroundColor = backgroundColour
-    }
     
-    @IBAction func blueSliderAction() {
-        blueSliderValue.text = String(format: "%.2f", blueSlider.value)
-        
-        let backgroundColour = UIColor(
-            red: CGFloat(redSlider.value),
-            green: CGFloat(greenSlider.value),
-            blue: CGFloat(blueSlider.value),
-            alpha: 1.0
-        )
-        
-        colourizedView.backgroundColor = backgroundColour
+    @IBAction func doneButtonPressed(_ sender: UIButton) {
+        delegate?.setColor(colourizedView.backgroundColor ?? .white)
+        dismiss(animated: true)
     }
-    
+
+   
 }
 
 // MARK: PRIVATE PROPERTIES
-
-private func setValue(for colourSliders: UISlider...) {
-    let ciColor = CIColor(color: viewColor)
-    colourSliders.forEach { slider in
-        switch slider {
-        case redSlider:
-            redSlider.value = Float(ciColor.red)
-        case greenSlider:
-            greenSlider.value = Float(ciColor.green)
-        default:
-            blueSlider.value = Float(ciColor.blue)
+extension ColorSettingsViewController {
+    
+    private func setValue(for colourSliders: UISlider...) {
+        let ciColor = CIColor(color: viewColor)
+        colourSliders.forEach { slider in
+            switch slider {
+            case redSlider:
+                redSlider.value = Float(ciColor.red)
+            case greenSlider:
+                greenSlider.value = Float(ciColor.green)
+            default:
+                blueSlider.value = Float(ciColor.blue)
+            }
         }
+    }
+
+    private func setValue(for labels: UILabel...) {
+        labels.forEach { label in
+            switch label {
+            case redSliderValue:
+                label.text = string(from: redSlider)
+            case greenSliderValue:
+                label.text = string(from: greenSlider)
+            default:
+                label.text = string(from: blueSlider)
+            }
+        }
+    }
+
+    private func setValue(for textFields: UITextField...) {
+        textFields.forEach { textField in
+            switch textField {
+            case redSliderValue:
+                textField.text = string(from: redSlider)
+            case greenSliderValue:
+                textField.text = string(from: greenSlider)
+            default:
+                textField.text = string(from: blueSlider)
+            }
+        }
+    }
+    
+    private func setColor() {
+        colourizedView.backgroundColor = UIColor(
+        red: CGFloat(redSlider.value),
+        green: CGFloat(greenSlider.value),
+        blue: CGFloat(blueSlider.value),
+        alpha: 1
+        )
+    }
+
+    private func string(from slider: UISlider) -> String {
+        String(format: "%.2f", slider.value)
     }
 }
 
-private func setValue(for labels: UILabel...) {
-    labels.forEach { label in
-        switch label {
-        case redSliderValue:
-            label.text = string(from: redSlider)
-        case greenSliderValue:
-            label.text = string(from: greenSlider)
-        default:
-            label.text = string(from: blueSlider)
-        }
-    }
-}
-
-private func setValue(for textFields: UITextField...) {
-    textFields.forEach { textField in
-        switch textField {
-        case redSliderValue:
-            textField.text = string(from: redSlider)
-        case greenSliderValue:
-            textField.text = string(from: greenSlider)
-        default:
-            textField.text = string(from: blueSlider)
-        }
-    }
-}
-
-private func string(from slider: UISlider) -> String {
-    String(format: "%.2f", slider.value)
-}
